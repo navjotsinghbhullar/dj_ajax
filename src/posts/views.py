@@ -60,7 +60,7 @@ def load_post_data_view(request, num_posts):
             }
             data.append(item)
         return JsonResponse({'data': data[lower:upper], 'size': size})
-    return JsonResponse({}, status=400)
+    
 
 def post_detail_data_view(request, pk):
     obj = Post.objects.get(pk=pk)
